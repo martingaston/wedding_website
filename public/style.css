@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400");
+
+body {
+  box-sizing: border-box;
+  background-image: url("assets/bananas.png");
+  font-family: "EB Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #1c1c1c;
+  letter-spacing: 0.09375rem;
+}
+
+a {
+  color: #1c1c1c;
+  text-decoration-color: #bfe8e3;
+}
+
+#container {
+  max-width: 50rem;
+  margin: 6rem auto 3rem auto;
+  padding: 6rem;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(238, 238, 238);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  margin: 0 auto 0 auto;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  color: rgba(28, 28, 28, 0.7);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav #details {
+  display: flex;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  justify-content: space-evenly;
+}
+
+nav #details a {
+  color: rgba(28, 28, 28, 0.7);
+  text-decoration: none;
+}
+
+nav #details a:hover {
+  text-decoration: underline;
+}
+
+nav #details i {
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+
+nav ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0rem 0rem 0.5rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav li {
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav li:hover {
+  border-bottom: 2px solid rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+nav li.active {
+  color: rgba(28, 28, 28, 1);
+  border-bottom: 2px solid rgba(28, 28, 28, 0.7);
+}
+
+figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.photo {
+  width: 49rem;
+}
+
+img.flag {
+  filter: grayscale(80%);
+  opacity: 0.85;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  margin: 1rem;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+section p {
+  margin: 1rem 0;
+  padding: 0 0.5rem;
+  text-align: justify;
+}
+
+#zola-iframe-container {
+  width: calc(100% - 1rem);
+  margin: auto;
+}
+
+article a {
+  display: inline;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 3rem 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem;
+  color: rgba(28, 28, 28, 0.5);
+}
+
+footer a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.fa-heart {
+  padding: 0.5rem;
+  color: hotpink;
+}
+
+.fa-camera-retro {
+  padding: 0.5rem;
+  color: #1c1c1c;
+}
+
+.fa-github {
+  padding: 0.5rem;
+  color: #4078c0;
+}
+
+hr {
+  width: 100%;
+  margin: 2rem;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(28, 28, 28, 0),
+    rgba(28, 28, 28, 0.15),
+    rgba(28, 28, 28, 0)
+  );
+}
+
+#leaflet-map {
+  height: 27.5rem;
+  width: 49rem;
+}
+
+.two-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.two-grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.two-grid > div:nth-child(1) {
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(28, 28, 28, 0.02),
+      rgba(28, 28, 28, 0.15),
+      rgba(28, 28, 28, 0.02)
+    )
+    1 100%;
+}
+
+.two-grid > div > div {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 120px;
+  padding: 0 0.5rem;
+  text-align: justify;
+}
+
+.two-grid .lineup {
+  min-height: 320px;
+}
+
+.two-grid img {
+  height: 3.5rem;
+  padding: 1rem;
+}
+
+.two-grid h3 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.two-grid h4 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.two-grid p {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #container {
+    max-width: 50rem;
+    margin: 0.5rem auto 0 auto;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(238, 238, 238);
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  #zola-iframe-container {
+    height: 61rem;
+    overflow: hidden;
+  }
+}
