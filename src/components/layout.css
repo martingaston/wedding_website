@@ -4,7 +4,7 @@
 
 body {
   box-sizing: border-box;
-  background-image: url("assets/bananas.png");
+  background-image: url("../images/bananas.png");
   font-family: "EB Garamond", serif;
   font-style: normal;
   font-weight: 400;
@@ -24,6 +24,10 @@ a {
   padding: 6rem;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -87,6 +91,10 @@ nav li.active {
   border-bottom: 2px solid rgba(28, 28, 28, 0.7);
 }
 
+nav li a {
+  text-decoration: none;
+}
+
 figure {
   display: flex;
   align-items: center;
@@ -97,7 +105,7 @@ figure {
 }
 
 .photo {
-  width: 49rem;
+  width: 100%;
 }
 
 img.flag {
@@ -126,6 +134,7 @@ h2 {
   margin: 1rem;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 section p {
@@ -186,17 +195,36 @@ hr {
   );
 }
 
-#leaflet-map {
-  height: 27.5rem;
-  width: 49rem;
+.one-column {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.one-column > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
 }
 
 .two-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: row;
 }
 
 .two-grid div {
@@ -205,11 +233,14 @@ hr {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  min-height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0.5rem;
+  text-align: justify;
 }
 
-.two-grid > div:nth-child(1) {
-  border-width: 0 1px 0 0;
+.two-grid > div:nth-child(2) {
+  border-width: 0 0 0 1px;
   border-style: solid;
   border-image: linear-gradient(
       to bottom,
@@ -220,23 +251,13 @@ hr {
     1 100%;
 }
 
-.two-grid > div > div {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 120px;
-  padding: 0 0.5rem;
-  text-align: justify;
-}
-
-.two-grid .lineup {
-  min-height: 320px;
-}
-
+.one-column img,
 .two-grid img {
   height: 3.5rem;
   padding: 1rem;
 }
 
+.one-column h3,
 .two-grid h3 {
   padding: 0;
   margin: 0;
@@ -250,6 +271,11 @@ hr {
   text-align: center;
 }
 
+.one-column h3 {
+  padding-top: 1rem;
+}
+
+.one-column h4,
 .two-grid h4 {
   padding: 0;
   margin: 0;
@@ -263,6 +289,19 @@ hr {
   text-align: center;
 }
 
+.one-column h5 {
+  padding: 1rem 0 0 0;
+  margin: 0;
+  border: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.one-column p,
 .two-grid p {
   text-align: center;
 }
@@ -292,8 +331,21 @@ hr {
   nav ul {
     flex-direction: column;
   }
+  nav li {
+    padding: 0.5rem;
+    text-align: center;
+  }
   #zola-iframe-container {
     height: 61rem;
     overflow: hidden;
+  }
+  .two-grid {
+    flex-direction: column;
+  }
+  .two-grid > div:nth-child(2) {
+    border: 0px;
+  }
+  hr {
+    margin: 0.5rem;
   }
 }
