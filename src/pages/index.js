@@ -6,8 +6,8 @@ import jammob from "../images/intro-mobile.jpg";
 export default props => (
   <Layout title="Jessi &amp; Martin" location={props.location}>
     <picture>
-      <source className="photo" srcset={jammob} media="(max-width: 600px)" />
-      <source srcset={jam} />
+      <source srcSet={jammob} media="(max-width: 600px)" />
+      <source srcSet={jam} />
       <img className="photo" src={jam} alt="The day we met..." />
     </picture>
     <article id="story">

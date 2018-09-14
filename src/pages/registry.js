@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 
 export default props => (
-  <Layout title="Gifts" location={props.location}>
+  <Layout title="Registry" location={props.location}>
     <article id="zola">
       <section>
         <p>
