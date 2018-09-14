@@ -10,16 +10,16 @@ export default props => (
     <div className="one-column">
       <div>
         <img alt="Lobstah" src={lobster} />
-        <h2>Welcome to Cape Cod Party</h2>
+        <h2>A Cape Cod Welcome</h2>
         <h4>Friday May 24, 2019</h4>
         <h4>8:00pm-11:00pm</h4>
         <h3>Swan River</h3>
         <h4>5 Lower County Rd, Dennis Port, MA 02639</h4>
         <h5>Casual</h5>
         <p>
-          We'd love to welcome you to Cape Cod in the most Cape Cod way
-          possible: drinking cocktails at a family-run bar as the sun sets over
-          an outstanding view of the beach.
+          If you're in town on Friday, we'd love to informally welcome you to
+          Cape Cod in the most Cape Cod way possible: sharing a cocktail at a
+          family-run bar as the sun sets over an outstanding view of the beach.
         </p>
       </div>
       <hr />
@@ -32,15 +32,15 @@ export default props => (
         <h4>23 Snow Inn Rd, Harwich Port, MA 02646</h4>
         <h5>Gladrags</h5>
         <p>
-          A 6pm lawn ceremony followed by great cocktails, a wonderful dinner,
-          charming speeches and questionable dancing. Arrive ready to party and
-          we'll take care of the rest.
+          5:30pm seating for a lawn ceremony followed by great cocktails, a
+          wonderful dinner, charming speeches and questionable dancing. Arrive
+          ready to party and we'll take care of the rest.
         </p>
       </div>
       <hr />
       <div>
         <img alt="Donuts" src={donut} />
-        <h2>Memorial Day Beach Brunch</h2>
+        <h2>Memorial Weekend Beach Brunch</h2>
         <h4>Sunday May 26, 2019</h4>
         <h4>11:00am-1:00pm</h4>
         <h3>Beach TBD</h3>
