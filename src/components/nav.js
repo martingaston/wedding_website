@@ -33,13 +33,13 @@ export default class Nav extends React.Component {
       <nav>
         <div id="details">
           <div>
-            <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=NXI2dTVrYjJuYzNyOHByb2o4ZTA2Z3NwNzggc3F1aWRtYW5AbQ&tmsrc=squidman%40gmail.com">
+            <a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NXI2dTVrYjJuYzNyOHByb2o4ZTA2Z3NwNzggc3F1aWRtYW5AbQ&amp;tmsrc=squidman%40gmail.com">
               <i className="far fa-calendar-alt" />
               May 25, 2019
             </a>
           </div>
           <div>
-            <a href="https://www.google.com/maps/search/?api=1&query=wychmere+beach+club">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=wychmere+beach+club">
               <i className="fas fa-globe-americas" />
               Harwich, MA
             </a>
@@ -50,7 +50,7 @@ export default class Nav extends React.Component {
           <List path={this.props.path} link={"/lineup"} text={"Lineup"} />
           <List path={this.props.path} link={"/capecod"} text={"Cape Cod"} />
           <List path={this.props.path} link={"/travel"} text={"Travel"} />
-          <List path={this.props.path} link={"/gifts"} text={"Gifts"} />
+          <List path={this.props.path} link={"/registry"} text={"Registry"} />
           <List path={this.props.path} link={"/faq"} text={"FAQ"} />
         </ul>
       </nav>
