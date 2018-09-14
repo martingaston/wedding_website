@@ -32,7 +32,7 @@ export default ({ children, location, title }) => (
     <footer>
       <p>
         <i className="fas fa-camera-retro" />
-        &amp; matchmaking
+        &amp; matchmaking{" "}
         <a href="https://www.twitter.com/VikkiWillimott">@VikkiWillimott</a>.
         Thanks to a patient Jessi for letting us make the website from scratch
         <i className="fas fa-heart" />

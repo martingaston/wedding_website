@@ -163,7 +163,8 @@ footer {
   margin: 0 0 3rem 0;
   font-family: "Montserrat", sans-serif;
   font-size: 0.65rem;
-  color: rgba(28, 28, 28, 0.5);
+  color: rgba(28, 28, 28, 0.4);
+  text-shadow: 2px 2px 4px rgb(238, 238, 238);
 }
 
 footer a {
@@ -188,7 +189,7 @@ footer a {
 
 hr {
   width: 100%;
-  margin: 2rem;
+  margin: 1rem;
   border: 0;
   height: 1px;
   background-image: linear-gradient(
