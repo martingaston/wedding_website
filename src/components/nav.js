@@ -41,7 +41,7 @@ export default class Nav extends React.Component {
           <div>
             <a href="https://www.google.com/maps/search/?api=1&amp;query=wychmere+beach+club">
               <i className="fas fa-globe-americas" />
-              Harwich, MA
+              Harwichport, MA
             </a>
           </div>
         </div>

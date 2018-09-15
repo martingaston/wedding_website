@@ -5,7 +5,9 @@ export default props => (
   <Layout title="FAQ" location={props.location}>
     <article id="FAQ">
       <section>
-        <h3>Are children invited to the wedding?</h3>
+        <h3 style={{ textAlign: "center" }}>
+          Are children invited to the wedding?
+        </h3>
         <p>
           While we love spending time with your littles, the venue is beautiful
           but not kid-friendly. If you will have an infant that you need to keep

@@ -63,8 +63,7 @@ nav #details a:hover {
 }
 
 nav #details i {
-  margin-left: 1rem;
-  margin-right: 0.5rem;
+  margin: 0 0.25rem;
 }
 
 nav ul {
@@ -99,7 +98,8 @@ nav li a {
   padding: 1rem 1rem 0.5rem 1rem;
 }
 
-figure {
+figure,
+picture {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +109,7 @@ figure {
 }
 
 .photo {
-  width: 100%;
+  width: calc(100% - 1rem);
 }
 
 img.flag {
@@ -138,6 +138,10 @@ h2 {
   margin: 1rem;
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+#FAQ section h3 {
   text-align: center;
 }
 
@@ -190,7 +194,7 @@ footer a {
 
 hr {
   width: 100%;
-  margin: 1rem;
+  margin: 0.5rem;
   border: 0;
   height: 1px;
   background-image: linear-gradient(
@@ -204,7 +208,7 @@ hr {
 .one-column {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 24rem;
   justify-content: center;
   align-items: center;
 }
@@ -334,6 +338,12 @@ section {
   h1 {
     font-size: 2.5rem;
   }
+  h2 {
+    margin: 0.5rem;
+  }
+  nav {
+    margin: 0px;
+  }
   nav ul {
     flex-direction: column;
   }
@@ -356,6 +366,12 @@ section {
     border: 0px;
   }
   hr {
-    margin: 0.5rem;
+    margin: 0.25rem;
+  }
+  nav #details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
