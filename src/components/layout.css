@@ -82,6 +82,8 @@ nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 nav li {
@@ -348,6 +350,16 @@ section {
 .two-grid li {
   list-style: none;
   text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  #container {
+    max-width: 50rem;
+    margin: 1rem auto 1rem auto;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(238, 238, 238);
+  }
 }
 
 @media only screen and (max-width: 600px) {
