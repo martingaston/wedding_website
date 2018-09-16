@@ -6,7 +6,7 @@ import rings from "../images/wedding-rings.svg";
 import donut from "../images/donut.svg";
 
 export default props => (
-  <Layout title="Lineup" location={props.location}>
+  <Layout title="Schedule" location={props.location}>
     <div className="one-column">
       <div>
         <img alt="Lobstah" src={lobster} />

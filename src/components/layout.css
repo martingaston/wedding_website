@@ -15,7 +15,18 @@ body {
 
 a {
   color: #1c1c1c;
-  text-decoration-color: #bfe8e3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  border-bottom: 1px solid;
+  background: #bfe8e3;
 }
 
 #container {
@@ -56,23 +67,23 @@ nav #details {
 nav #details a {
   color: rgba(28, 28, 28, 0.7);
   text-decoration: none;
-}
-
-nav #details a:hover {
-  text-decoration: underline;
+  font-weight: normal;
 }
 
 nav #details i {
-  margin-left: 1rem;
-  margin-right: 0.5rem;
+  margin: 0 0.25rem;
 }
 
 nav ul {
   margin: 0;
+  max-width: 100%;
   list-style-type: none;
   padding: 0rem 0rem 0.5rem 0rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 nav li {
@@ -99,7 +110,19 @@ nav li a {
   padding: 1rem 1rem 0.5rem 1rem;
 }
 
-figure {
+nav li a:hover {
+  border-bottom: 1px solid;
+  background: inherit;
+}
+
+nav li a:hover,
+nav li a:focus {
+  border: 0;
+  background: inherit;
+}
+
+figure,
+picture {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +132,7 @@ figure {
 }
 
 .photo {
-  width: 100%;
+  width: calc(100% - 1rem);
 }
 
 img.flag {
@@ -138,6 +161,10 @@ h2 {
   margin: 1rem;
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+#FAQ section h3 {
   text-align: center;
 }
 
@@ -190,7 +217,7 @@ footer a {
 
 hr {
   width: 100%;
-  margin: 1rem;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
   border: 0;
   height: 1px;
   background-image: linear-gradient(
@@ -204,7 +231,7 @@ hr {
 .one-column {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  max-width: 24rem;
   justify-content: center;
   align-items: center;
 }
@@ -214,6 +241,8 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 article {
@@ -323,6 +352,16 @@ section {
   text-align: center;
 }
 
+@media only screen and (max-width: 800px) {
+  #container {
+    max-width: 50rem;
+    margin: 1rem auto 1rem auto;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(238, 238, 238);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #container {
     max-width: 50rem;
@@ -333,6 +372,12 @@ section {
   }
   h1 {
     font-size: 2.5rem;
+  }
+  h2 {
+    margin: 0.5rem;
+  }
+  nav {
+    margin: 0px;
   }
   nav ul {
     flex-direction: column;
@@ -356,6 +401,12 @@ section {
     border: 0px;
   }
   hr {
-    margin: 0.5rem;
+    margin: 0.5rem 0.25rem 0.25rem 0.25rem;
+  }
+  nav #details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
