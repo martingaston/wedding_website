@@ -12,10 +12,11 @@ More than happy to be on the recieving end of any tips regarding best practice o
 
 ## Stack
 
-:heart*eyes: Gatsby \_V2*
-:earth_americas: Leaflet (with react-leaflet)
-:gem: Good Old Google Fonts
-:kiss: Prettier
-:guardsman: **P**lain **O**ld **S**emantic **H**TML
+- :heart_eyes: Gatsby *V2*
+- :earth_americas: Leaflet (with react-leaflet)
+- :gem: Good Old Google Fonts
+- :kiss: Prettier
+- :guardsman: **P**lain **O**ld **S**emantic **H**TML
+
 
 :bride_with_veil:
