@@ -9,7 +9,7 @@ export default class CapeCodMap extends React.Component {
   };
   render() {
     const style = {
-      width: "100%",
+      width: "calc(100% - 1rem)",
       height: "27.5rem"
     };
     const position = [this.state.lat, this.state.lng];
