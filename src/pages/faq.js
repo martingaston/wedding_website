@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
+import { Link } from "gatsby";
 
 export default props => (
   <Layout title="FAQ" location={props.location}>
@@ -30,10 +31,11 @@ export default props => (
         </p>
         <h3>Where should we stay?</h3>
         <p>
-          That's SUCH a good question that we made a special section for it. The
-          short answer? You've got options. The wedding is at Wychmere Beach
-          Club so center your searches around Harwich, Dennis, Chatham, Brewster
-          and Orleans.
+          That's SUCH a good question that{" "}
+          <Link to="/capecod">we made a special section for it</Link>. The short
+          answer? You've got options. The wedding is at Wychmere Beach Club so
+          center your searches around Harwich, Dennis, Chatham, Brewster and
+          Orleans.
         </p>
         <h3>How do I get to the wedding?</h3>
         <p>
@@ -70,11 +72,12 @@ export default props => (
         </p>
         <h3>What should I eat?</h3>
         <p>
-          If I could make you a BINGO card, I would. Some Langsen favorites
-          include Arnolds or PJ's for the best beachy junk food fix, Sundae
-          School or the Chocolate Sparrow for an ice cream cone, Blackfish or
-          Viera for a nice dinner out, the Red Inn for dinner and the Governor
-          Bradford for drag queen karaoke in Provincetown.
+          If I could make you a BINGO card, I would.{" "}
+          <Link to="/capecod">Some Langsen favorites include</Link> Arnolds or
+          PJ's for the best beachy junk food fix, Sundae School or the Chocolate
+          Sparrow for an ice cream cone, Blackfish or Viera for a nice dinner
+          out, the Red Inn for dinner and the Governor Bradford for drag queen
+          karaoke in Provincetown.
         </p>
         <h3>When we're not at the wedding, what should we do?</h3>
         <p>

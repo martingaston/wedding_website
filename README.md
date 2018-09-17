@@ -12,11 +12,11 @@ More than happy to be on the recieving end of any tips regarding best practice o
 
 ## Stack
 
-- :heart_eyes: Gatsby *V2*
+- :heart_eyes: Gatsby V2
 - :earth_americas: Leaflet (with react-leaflet)
 - :gem: Good Old Google Fonts
 - :kiss: Prettier
 - :guardsman: **P**lain **O**ld **S**emantic **H**TML
-
+- :trophy: Icons designed by [eucalyp](https://creativemarket.com/eucalyp) and [Freepik](https://www.freepik.com/) from [Flaticon](www.flaticon.com)
 
 :bride_with_veil:

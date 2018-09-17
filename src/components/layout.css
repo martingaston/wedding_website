@@ -286,6 +286,10 @@ section {
     1 100%;
 }
 
+.reservations {
+  min-height: 20rem;
+}
+
 .one-column img,
 .two-grid img {
   height: 3.5rem;
@@ -402,6 +406,10 @@ section {
   }
   hr {
     margin: 0.5rem 0.25rem 0.25rem 0.25rem;
+  }
+  .reservations {
+    min-height: 10rem;
+    margin-bottom: 1rem;
   }
   nav #details {
     display: flex;
