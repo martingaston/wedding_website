@@ -67,6 +67,24 @@ export default class CapeCodMap extends React.Component {
           <Marker position={[42.05216, -70.18561]}>
             <Popup>Governor Bradford</Popup>
           </Marker>
+          <Marker position={[41.7622235, -70.0835371]}>
+            <Popup>Woodshed</Popup>
+          </Marker>
+          <Marker position={[41.7889962, -69.9909383]}>
+            <Popup>Hole In One</Popup>
+          </Marker>
+          <Marker position={[41.679658, -69.9592467]}>
+            <Popup>Chatham Squire</Popup>
+          </Marker>
+          <Marker position={[41.7895014, -69.9915494]}>
+            <Popup>Sunbird Kitchen</Popup>
+          </Marker>
+          <Marker position={[41.7895054, -69.9915494]}>
+            <Popup>Land Ho!</Popup>
+          </Marker>
+          <Marker position={[41.75407, -70.1551718]}>
+            <Popup>Sesuit Harbor Cafe</Popup>
+          </Marker>
         </Map>
       );
     } else {
