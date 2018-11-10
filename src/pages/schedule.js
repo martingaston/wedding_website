@@ -1,28 +1,12 @@
 import React from "react";
 import Layout from "../components/layout";
 
-import lobster from "../images/lobster.svg";
 import rings from "../images/wedding-rings.svg";
 import donut from "../images/donut.svg";
 
 export default props => (
   <Layout title="Schedule" location={props.location}>
     <div className="one-column">
-      <div>
-        <img alt="Lobstah" src={lobster} />
-        <h2>A Cape Cod Welcome</h2>
-        <h4>Friday May 24, 2019</h4>
-        <h4>8:00pm-11:00pm</h4>
-        <h3>Swan River</h3>
-        <h4>5 Lower County Rd, Dennis Port, MA 02639</h4>
-        <h5>Casual</h5>
-        <p>
-          If you're in town on Friday, we'd love to informally welcome you to
-          Cape Cod in the most Cape Cod way possible: sharing a cocktail at a
-          family-run bar as the sun sets over an outstanding view of the beach.
-        </p>
-      </div>
-      <hr />
       <div>
         <img alt="Wedding Rings" src={rings} />
         <h2>The Big Day</h2>
