@@ -75,6 +75,11 @@ export default class CapeCod extends React.Component {
                   <h3>Charm To Spare</h3>
                   <ul>
                     <li>
+                      <a href="https://www.platinumpebble.com/">
+                        The Platinum Pebble
+                      </a>
+                    </li>
+                    <li>
                       <a href="http://www.anenglishgardenbb.com/">
                         An English Garden Bed and Breakfast
                       </a>
@@ -107,9 +112,21 @@ export default class CapeCod extends React.Component {
                   <h3>Keep It Simple</h3>
                   <ul>
                     <li>
-                      <a href="https://www.shoalscapecodinn.com/">
-                        Handkerchief Shoals (we have 15 rooms reserved as a
-                        block between $130-$150 per night)
+                      <a href="https://www.innatswanriver.com/en-us">
+                        Inn at Swan River (we have a block booking)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://www.harborbreezeinn.com/">
+                        Allen Harbor Breeze Inn
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.theterninn.com/">The Tern Inn</a>
+                    </li>
+                    <li>
+                      <a href="http://www.beachbreezeinn.net/">
+                        Beach Breeze Inn
                       </a>
                     </li>
                   </ul>
