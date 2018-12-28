@@ -13,7 +13,9 @@ export default class Rsvp extends React.Component {
   }
 
   handleGuest(e) {
-    this.setState({ toggle: true });
+    this.setState((state, props) => { 
+        return { toggle: !state.toggle }
+    });
   }
 
   render() {
@@ -38,7 +40,7 @@ export default class Rsvp extends React.Component {
           will give us enough time to sort everything out.
         </p>
         <form id="rsvp" action="/submit" method="POST">
-          <FormData />
+          <FormData pronoun="you" adjective="your" />
           Are you also responding for another guest?
           <ul>
             <li>
@@ -46,9 +48,10 @@ export default class Rsvp extends React.Component {
                 type="radio"
                 id="guest_no"
                 name="guest"
+                onChange={this.handleGuest}
                 checked={!this.state.toggle}
               />
-              <label for="guest_no">No, they can sort it themselves</label>
+              <label for="guest_no">No, just me</label>
             </li>
             <li>
               <input
@@ -61,7 +64,7 @@ export default class Rsvp extends React.Component {
               <label for="guest_yes">Yes, they're very lazy</label>
             </li>
           </ul>
-          {this.state.toggle && <FormData />}
+          {this.state.toggle && <FormData pronoun="they" adjective="their" />}
           <div>
             <label for="more">
               Is there anything else you'd like to let us know?

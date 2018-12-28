@@ -1,6 +1,7 @@
 import React from "react";
 
 export default props => {
+  const { pronoun, adjective } = props
   return (
     <div>
       <div>
@@ -12,7 +13,7 @@ export default props => {
         <input type="email" id="email" name="email" required />
       </div>
       <div>
-        <label for="restrictions">Do you have any dietary restrictions?</label>
+        <label for="restrictions">Do {pronoun} have any dietary restrictions?</label>
         <input
           type="text"
           id="restrictions"
@@ -22,7 +23,7 @@ export default props => {
       </div>
       <div>
         <label for="main">
-          What terribly delicious dish would you like for your main?
+          What terribly delicious dish would {pronoun} like for {adjective} main?
         </label>
         <select id="main" name="main" required>
           <option>
@@ -41,7 +42,7 @@ export default props => {
         </select>
       </div>
       <div>
-        <label for="fact">Tell us an interesting fact about yourself:</label>
+        <label for="fact">Tell us an interesting fact about {pronoun === "you" ? "yourself" : "them"}:</label>
         <input type="text" id="fact" name="fact" required />
       </div>
     </div>
