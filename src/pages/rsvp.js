@@ -44,7 +44,7 @@ export default class Rsvp extends React.Component {
       ...this.state.data
     });
 
-    fetch("/", {
+    fetch("/?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: data
