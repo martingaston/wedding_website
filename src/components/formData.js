@@ -1,12 +1,10 @@
 import React from "react";
 
 export default props => {
-  console.log(props.values);
   const { handleChange, id, pronoun, adjective } = props;
   const { name, email, restrictions, main, fact } = props.values;
   return (
     <div>
-      <input type="hidden" name="rsvp" value="contact" />
       <div>
         <label for={id + "Name"}>Name:</label>
         <input

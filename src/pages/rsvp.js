@@ -36,20 +36,31 @@ export default class Rsvp extends React.Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = encode({
+      "form-name": form.getAttribute("name"),
+      ...this.state.data
+    });
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "rsvp", ...this.state.data })
+      body: data
     })
       .then(() => this.setState({ submitted: true }))
       .catch(error => alert(error));
-
-    e.preventDefault();
   }
 
   handleChange = e => {
-    console.log(e.target.name);
-    this.setState({ data: { [e.target.name]: e.target.value } });
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      data: {
+        ...prevState.data,
+        [name]: value
+      }
+    }));
   };
 
   handleGuest(e) {
@@ -103,10 +114,20 @@ export default class Rsvp extends React.Component {
         </p>
         <form
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          method="post"
+          action=""
           name="rsvp"
           id="rsvp"
           onSubmit={this.handleSubmit}
         >
+          <input type="hidden" name="form-name" value="rsvp" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{" "}
+              <input name="bot-field" onChange={this.handleChange} />
+            </label>
+          </p>
           <FormData
             handleChange={this.handleChange}
             values={first}
