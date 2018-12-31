@@ -1,16 +1,56 @@
 import React from "react";
 import Layout from "../components/layout";
 import FormData from "../components/formData";
+import RSVPSuccess from "../components/rsvp-success";
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 export default class Rsvp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggle: false
+      toggle: false,
+      submitted: false,
+      data: {
+        firstName: "",
+        firstEmail: "",
+        firstRestrictions: "",
+        firstMain: "chicken",
+        firstFact: "",
+        secondName: "",
+        secondEmail: "",
+        secondRestrictions: "",
+        secondMain: "chicken",
+        secondFact: "",
+        more: ""
+      }
     };
 
     this.handleGuest = this.handleGuest.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleSubmit(e) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "rsvp", ...this.state.data })
+    })
+      .then(() => this.setState({ submitted: true }))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  }
+
+  handleChange = e => {
+    console.log(e.target.name);
+    this.setState({ data: { [e.target.name]: e.target.value } });
+  };
 
   handleGuest(e) {
     this.setState((state, props) => {
@@ -19,6 +59,26 @@ export default class Rsvp extends React.Component {
   }
 
   render() {
+    const { data } = this.state;
+
+    const first = {
+      name: data.firstName,
+      email: data.firstEmail,
+      restrictions: data.firstRestrictions,
+      main: data.firstMain,
+      fact: data.firstFact
+    };
+
+    const second = {
+      name: data.secondName,
+      email: data.secondEmail,
+      restrictions: data.secondRestrictions,
+      main: data.secondMain,
+      fact: data.secondFact
+    };
+
+    if (this.state.submitted)
+      return <RSVPSuccess location={this.props.location} />;
     return (
       <Layout title="RSVP" location={this.props.location}>
         <p>
@@ -41,16 +101,14 @@ export default class Rsvp extends React.Component {
           will give us enough time to both sort everything out and get very
           excited about seeing you.
         </p>
-        <form
-          name="rsvp"
-          id="rsvp"
-          method="POST"
-          action="/rsvp-success"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="rsvp" />
-          <FormData id="first" pronoun="you" adjective="your" />
+        <form id="rsvp" onSubmit={this.handleSubmit}>
+          <FormData
+            handleChange={this.handleChange}
+            values={first}
+            id="first"
+            pronoun="you"
+            adjective="your"
+          />
           <div>
             Are you also responding for another guest?
             <ul>
@@ -77,22 +135,29 @@ export default class Rsvp extends React.Component {
             </ul>
           </div>
           {this.state.toggle && (
-            <FormData id="second" pronoun="they" adjective="their" />
+            <FormData
+              handleChange={this.handleChange}
+              values={second}
+              id="second"
+              pronoun="they"
+              adjective="their"
+            />
           )}
           <div>
             <label for="more">
               Is there anything else you'd like to let us know?
             </label>
-            <textarea id="more" name="more" cols="35" rows="10" />
+            <textarea
+              onChange={this.handleChange}
+              value={this.state.more}
+              id="more"
+              name="more"
+              cols="35"
+              rows="10"
+            />
           </div>
           <div>
             <input type="submit" value="I promise I'll be good" />
-          </div>
-          <div id="bot-field">
-            <label>
-              Don't fill this out:
-              <input name="bot-field" />
-            </label>
           </div>
         </form>
       </Layout>
