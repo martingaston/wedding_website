@@ -13,7 +13,7 @@ export default class Rsvp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggle: false,
+      toggle: true,
       submitted: false,
       data: {
         firstName: "",
@@ -69,6 +69,10 @@ export default class Rsvp extends React.Component {
     });
   }
 
+  componentDidMount() {
+    this.setState({ toggle: false });
+  }
+
   render() {
     const { data } = this.state;
 
@@ -87,6 +91,8 @@ export default class Rsvp extends React.Component {
       main: data.secondMain,
       fact: data.secondFact
     };
+
+    const formName = "rsvp=2019";
 
     if (this.state.submitted)
       return <RSVPSuccess location={this.props.location} />;
@@ -117,11 +123,11 @@ export default class Rsvp extends React.Component {
           data-netlify-honeypot="bot-field"
           method="post"
           action=""
-          name="rsvp"
+          name={formName}
           id="rsvp"
           onSubmit={this.handleSubmit}
         >
-          <input type="hidden" name="form-name" value="rsvp" />
+          <input type="hidden" name="form-name" value={formName} />
           <p hidden>
             <label>
               Don’t fill this out:{" "}
