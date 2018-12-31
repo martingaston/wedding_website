@@ -101,7 +101,12 @@ export default class Rsvp extends React.Component {
           will give us enough time to both sort everything out and get very
           excited about seeing you.
         </p>
-        <form id="rsvp" onSubmit={this.handleSubmit}>
+        <form
+          data-netlify="true"
+          name="rsvp"
+          id="rsvp"
+          onSubmit={this.handleSubmit}
+        >
           <FormData
             handleChange={this.handleChange}
             values={first}
