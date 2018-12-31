@@ -6,6 +6,7 @@ export default props => {
   const { name, email, restrictions, main, fact } = props.values;
   return (
     <div>
+      <input type="hidden" name="rsvp" value="contact" />
       <div>
         <label for={id + "Name"}>Name:</label>
         <input
