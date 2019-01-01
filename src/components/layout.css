@@ -418,3 +418,37 @@ section {
     justify-content: center;
   }
 }
+
+#rsvp {
+    display: flex;
+    flex-direction: column;
+    }
+
+#rsvp select {
+        width: 100%;
+}
+
+#rsvp div {
+        margin-top: 0.5rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+}
+
+#rsvp ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+}
+
+#rsvp textarea, select, input {
+        padding: 0.25rem;
+}
+
+#rsvp textarea {
+        resize: none;
+}
+
+#bot-field {
+    display: none !important;
+}
