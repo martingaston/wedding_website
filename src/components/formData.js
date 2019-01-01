@@ -6,7 +6,7 @@ export default props => {
   return (
     <div>
       <div>
-        <label for={id + "Name"}>Name:</label>
+        <label htmlFor={id + "Name"}>Name:</label>
         <input
           type="text"
           id={id + "Name"}
@@ -17,7 +17,7 @@ export default props => {
         />
       </div>
       <div>
-        <label for={id + "Email"}>Email:</label>
+        <label htmlFor={id + "Email"}>Email:</label>
         <input
           type="email"
           id={id + "Email"}
@@ -28,7 +28,7 @@ export default props => {
         />
       </div>
       <div>
-        <label for={id + "Restrictions"}>
+        <label htmlFor={id + "Restrictions"}>
           Do {pronoun} have any dietary restrictions?
         </label>
         <input
@@ -41,7 +41,7 @@ export default props => {
         />
       </div>
       <div>
-        <label for={id + "Main"}>
+        <label htmlFor={id + "Main"}>
           What terribly delicious dish would {pronoun} like for {adjective}{" "}
           main?
         </label>
@@ -68,7 +68,7 @@ export default props => {
         </select>
       </div>
       <div>
-        <label for={id + "Fact"}>
+        <label htmlFor={id + "Fact"}>
           Tell us an interesting fact about{" "}
           {pronoun === "you" ? "yourself" : "them"}:
         </label>

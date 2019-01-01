@@ -2,7 +2,25 @@ import React from "react";
 import Layout from "../components/layout";
 import { Link } from "gatsby";
 
-export default props => (
+export const Failure = props => (
+  <Layout title="Uh oh!" location={props.location}>
+    <article id="failure">
+      <section>
+        <p>
+          Oh no - something has gone a bit squiffy with the form. We're sorry to
+          have to ask, but please can you try again later? It might be worth
+          double checking your connection.
+        </p>
+        <p>
+          If it happens again please let us know directly and we'll get it fixed
+          up.
+        </p>
+      </section>
+    </article>
+  </Layout>
+);
+
+export const Success = props => (
   <Layout title="Yay!" location={props.location}>
     <article id="success">
       <section>
@@ -19,7 +37,8 @@ export default props => (
         </p>
         <p>
           Also, if you'll be driving from Boston to Cape Cod we'd recommend you
-          give yourself about three hours for the trip.
+          disregard what Google Maps optimistically says and give yourself about
+          three hours for the trip.
         </p>
       </section>
     </article>

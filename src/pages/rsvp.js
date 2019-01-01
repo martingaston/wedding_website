@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import FormData from "../components/formData";
-import RSVPSuccess from "../components/rsvp-success";
+import { Success, Failure } from "../components/rsvp-success";
 
 const encode = data => {
   return Object.keys(data)
@@ -14,6 +14,7 @@ export default class Rsvp extends React.Component {
     super(props);
     this.state = {
       toggle: true,
+      error: false,
       submitted: false,
       data: {
         firstName: "",
@@ -44,13 +45,17 @@ export default class Rsvp extends React.Component {
       ...this.state.data
     });
 
+    // no-cache=1 ensures Gatsby doesn't delegate the form to a service worker instead of Netlify
     fetch("/?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: data
     })
       .then(() => this.setState({ submitted: true }))
-      .catch(error => alert(error));
+      .catch(error => {
+        console.log(error);
+        this.setState({ error: true });
+      });
   }
 
   handleChange = e => {
@@ -70,6 +75,7 @@ export default class Rsvp extends React.Component {
   }
 
   componentDidMount() {
+    // we need the full form to be there at first load for the Netlify form robot, but we hide it after component mounts.
     this.setState({ toggle: false });
   }
 
@@ -92,106 +98,102 @@ export default class Rsvp extends React.Component {
       fact: data.secondFact
     };
 
-    const formName = "rsvp=2019";
+    const formName = "rsvp-2019";
 
-    if (this.state.submitted)
-      return <RSVPSuccess location={this.props.location} />;
+    if (this.state.error) return <Failure location={this.props.location} />;
+    if (this.state.submitted) return <Success location={this.props.location} />;
     return (
       <Layout title="RSVP" location={this.props.location}>
-        <p>
-          We're really excited to have you join us on the day, but also it warms
-          our hearts to know that you like us enough to fill out a form.
-        </p>
-        <p>
-          We'd really appreciate it if you could make sure you fill out the form
-          for each individual person attending so we can manage the menu
-          choices. Have no fear, all the options are delicious.
-        </p>
-        <p>
-          We'll also pop your e-mail into a mailing list so we can easily
-          contact everyone with updates and gossip, but if you'd prefer not to
-          be contacted this way then that's also fine - just let us know and
-          we'll take you off.
-        </p>
-        <p>
-          If you could also let us know your choices by <b>April 15</b> that
-          will give us enough time to both sort everything out and get very
-          excited about seeing you.
-        </p>
-        <form
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          method="post"
-          action=""
-          name={formName}
-          id="rsvp"
-          onSubmit={this.handleSubmit}
-        >
-          <input type="hidden" name="form-name" value={formName} />
-          <p hidden>
-            <label>
-              Don’t fill this out:{" "}
-              <input name="bot-field" onChange={this.handleChange} />
-            </label>
-          </p>
-          <FormData
-            handleChange={this.handleChange}
-            values={first}
-            id="first"
-            pronoun="you"
-            adjective="your"
-          />
-          <div>
-            Are you also responding for another guest?
-            <ul>
-              <li>
-                <input
-                  type="radio"
-                  id="guest_no"
-                  name="guest"
-                  onChange={this.handleGuest}
-                  checked={!this.state.toggle}
+        <article>
+          <section>
+            <p>
+              We're really excited to have you join us on the day, but it also
+              warms our hearts to know that you like us enough to fill out a
+              form. If you could get back to us by <b>April 10</b> that would be
+              splendid.
+            </p>
+            <p>
+              We'd also really appreciate it if you could make sure you fill out
+              the form for each individual person attending in your party so we
+              can manage the menu choices. Have no fear, all the options are
+              delicious.
+            </p>
+            <form
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              method="post"
+              action=""
+              name={formName}
+              id="rsvp"
+              onSubmit={this.handleSubmit}
+            >
+              <input type="hidden" name="form-name" value={formName} />
+              <p hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input name="bot-field" onChange={this.handleChange} />
+                </label>
+              </p>
+              <FormData
+                handleChange={this.handleChange}
+                values={first}
+                id="first"
+                pronoun="you"
+                adjective="your"
+              />
+              <div>
+                Are you also responding for another guest?
+                <ul>
+                  <li>
+                    <input
+                      type="radio"
+                      id="guest_no"
+                      name="guest"
+                      onChange={this.handleGuest}
+                      checked={!this.state.toggle}
+                    />
+                    <label htmlFor="guest_no">No, just me</label>
+                  </li>
+                  <li>
+                    <input
+                      type="radio"
+                      id="guest_yes"
+                      name="guest"
+                      onChange={this.handleGuest}
+                      checked={this.state.toggle}
+                    />
+                    <label htmlFor="guest_yes">Yes, they're very lazy</label>
+                  </li>
+                </ul>
+              </div>
+              {this.state.toggle && (
+                <FormData
+                  handleChange={this.handleChange}
+                  values={second}
+                  id="second"
+                  pronoun="they"
+                  adjective="their"
                 />
-                <label for="guest_no">No, just me</label>
-              </li>
-              <li>
-                <input
-                  type="radio"
-                  id="guest_yes"
-                  name="guest"
-                  onChange={this.handleGuest}
-                  checked={this.state.toggle}
+              )}
+              <div>
+                <label htmlFor="more">
+                  Is there anything else you'd like to let us know?
+                </label>
+                <textarea
+                  onChange={this.handleChange}
+                  value={this.state.more}
+                  id="more"
+                  name="more"
+                  cols="35"
+                  rows="10"
                 />
-                <label for="guest_yes">Yes, they're very lazy</label>
-              </li>
-            </ul>
-          </div>
-          {this.state.toggle && (
-            <FormData
-              handleChange={this.handleChange}
-              values={second}
-              id="second"
-              pronoun="they"
-              adjective="their"
-            />
-          )}
-          <div>
-            <label for="more">
-              Is there anything else you'd like to let us know?
-            </label>
-            <textarea
-              onChange={this.handleChange}
-              value={this.state.more}
-              id="more"
-              name="more"
-              cols="35"
-              rows="10"
-            />
-          </div>
-          <div>
-            <input type="submit" value="I promise I'll be good" />
-          </div>
-        </form>
+              </div>
+              <div>
+                <input type="submit" value="I promise I'll be good" />
+              </div>
+            </form>
+          </section>
+        </article>
       </Layout>
     );
   }
