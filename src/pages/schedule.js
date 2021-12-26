@@ -8,7 +8,7 @@ import crab from "../images/crab.svg";
 export default props => (
   <Layout title="Schedule" location={props.location}>
     <div className="one-column">
-      <div>
+ {/*      <div>
         <img alt="Crab Cakes" src={crab} />
         <h2>Welcome Party</h2>
         <h4>Friday May 24, 2019</h4>
@@ -22,34 +22,32 @@ export default props => (
           parking) &amp; a round of stories and toasts from 7:30pm.
         </p>
       </div>
-      <hr />
+      <hr /> */}
       <div>
         <img alt="Wedding Rings" src={rings} />
         <h2>The Big Day</h2>
-        <h4>Saturday May 25, 2019</h4>
-        <h4>6:00pm-12:00am</h4>
-        <h3>Wychmere Beach Club</h3>
-        <h4>23 Snow Inn Rd, Harwich Port, MA 02646</h4>
-        <h5>Gladrags</h5>
+        <h4>Sunday October 23, 2022</h4>
+        <h4>5:30pm-10:30pm</h4>
+        <h3>Fire House KC</h3>
+        <h4>4518 Troost Ave, Kansas City, MO 64110</h4>
+        <h5>Formal/Cocktail Attire</h5>
         <p>
-          5:30pm seating for a lawn ceremony followed by great cocktails, a
-          wonderful dinner, charming speeches and questionable dancing. Arrive
-          ready to party and we'll take care of the rest.
+          5 pm seating for a courtyard ceremony followed by great drinks, tacos, 
+          charming speeches and questionable dancing.
         </p>
       </div>
       <hr />
       <div>
         <img alt="Donuts" src={donut} />
         <h2>Coffee &amp; Donuts</h2>
-        <h4>Sunday May 26, 2019</h4>
-        <h4>11:00am-12:30pm</h4>
-        <h3>Brooks Park</h3>
-        <h4>1 Oak Street, Harwich, MA 02645</h4>
+        <h4>Monday October 24, 2022</h4>
+        <h4>10:00am-11:30am</h4>
+        <h3>Tower Park</h3>
+        <h4>7500 Holmes Rd, Kansas City, MO 64131</h4>
         <h5>Day-after Casual</h5>
         <p>
-          Join us at the picnic tables with blue check tablecloths for our first
-          dozen donuts as a married couple. New England takes donuts incredibly
-          seriously; ours come from Hole in One. Kids welcome.
+          Join us at the picnic tables for our first
+          dozen donuts as a married couple!
         </p>
       </div>
     </div>

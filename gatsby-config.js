@@ -1,19 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: "Jessi &amp; Martin Get Married"
+    title: "Jaime &amp; Reece Get Married"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Jessi & Martin Get Married",
-        short_name: "Jessi & Martin",
+        name: "Jaime & Reece Get Married",
+        short_name: "Jaime & Reece",
         start_url: "/",
         background_color: "#bfe8e3",
         theme_color: "#bfe8e3",
         display: "standalone",
-        icon: "src/images/capecod.png" // This path is relative to the root of the site.
+        icon: "src/images/fountain.png" // This path is relative to the root of the site.
       }
     },
     {

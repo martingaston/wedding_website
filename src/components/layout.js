@@ -22,7 +22,7 @@ export default ({ children, location, title }) => (
         integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
         crossorigin=""
       />
-      <title>Jessi &amp; Martin Get Married</title>
+      <title>Jaime &amp; Reece Get Married</title>
     </Helmet>
     <div id="container">
       <Header siteTitle={title} />
@@ -30,17 +30,7 @@ export default ({ children, location, title }) => (
       {children}
     </div>
     <footer>
-      <p>
-        <i className="fas fa-camera-retro" />
-        &amp; matchmaking{" "}
-        <a href="https://www.twitter.com/VikkiWillimott">@VikkiWillimott</a>.
-        Thanks to a patient Jessi for letting us make the website from scratch
-        <i className="fas fa-heart" />
-        Source on
-        <a href="https://github.com/martingaston/wedding_website">
-          <i className="fab fa-github" />
-        </a>
-      </p>
+      
     </footer>
   </div>
 );

@@ -3,9 +3,9 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 
 export default class CapeCodMap extends React.Component {
   state = {
-    lat: 41.8107,
-    lng: -70.2045,
-    zoom: 9
+    lat: 39.0997,
+    lng: -94.5786,
+    zoom: 10
   };
   render() {
     const style = {
@@ -27,63 +27,42 @@ export default class CapeCodMap extends React.Component {
             maxZoom="18"
             minZoom="8"
           />
-          <Marker position={[41.664099, -70.066222]}>
+          <Marker position={[39.04482, -94.57306]}>
             <Popup>
               <b>The venue!</b>
               <br />
-              Wychmere Beach Club
+              Fire House KC
             </Popup>
           </Marker>
-          <Marker position={[41.381143, -70.645512]}>
-            <Popup>Martha's Vineyard</Popup>
+          <Marker position={[39.30377, -94.70923]}>
+            <Popup>MCI Airport</Popup>
           </Marker>
-          <Marker position={[41.844877, -69.94834]}>
-            <Popup>Coast Guard Beach</Popup>
+          <Marker position={[39.08809, -94.58744]}>
+            <Popup>Crossroads Hotel</Popup>
           </Marker>
-          <Marker position={[41.65503, -70.15418]}>
-            <Popup>Swan Inn</Popup>
+          <Marker position={[39.04670, -94.58648]}>
+            <Popup>Kansas City Marriott Country Club Plaza</Popup>
           </Marker>
-          <Marker position={[41.843692, -69.982739]}>
-            <Popup>Arnold's</Popup>
+          <Marker position={[39.04353, -94.58459]}>
+            <Popup>Southmoreland on the Plaza</Popup>
           </Marker>
-          <Marker position={[41.93513, -70.02022]}>
-            <Popup>PJ's</Popup>
+          <Marker position={[39.03993, -94.59224]}>
+            <Popup>InterContinental Kansas City at the Plaza</Popup>
           </Marker>
-          <Marker position={[41.66829, -70.06924]}>
-            <Popup>Sundae School</Popup>
+          <Marker position={[39.04886, -94.58228]}>
+            <Popup>The Truitt</Popup>
           </Marker>
-          <Marker position={[41.78827, -69.99315]}>
-            <Popup>Hot Chocolate Sparrow</Popup>
+          <Marker position={[39.04643, -94.59739]}>
+            <Popup>SpringHill Suites by Marriott Kansas City Plaza</Popup>
           </Marker>
-          <Marker position={[41.99567, -70.0505]}>
-            <Popup>Blackfish</Popup>
+          <Marker position={[39.04396, -94.59117]}>
+            <Popup>Residence Inn by Marriott Kansas City Country Club Plaza</Popup>
           </Marker>
-          <Marker position={[41.66847, -70.12098]}>
-            <Popup>Viera</Popup>
+          <Marker position={[39.04859, -94.58134]}>
+            <Popup>Oak Street Mansion</Popup>
           </Marker>
-          <Marker position={[42.03921, -70.19511]}>
-            <Popup>Red Inn</Popup>
-          </Marker>
-          <Marker position={[42.05216, -70.18561]}>
-            <Popup>Governor Bradford</Popup>
-          </Marker>
-          <Marker position={[41.7622235, -70.0835371]}>
-            <Popup>Woodshed</Popup>
-          </Marker>
-          <Marker position={[41.7889962, -69.9909383]}>
-            <Popup>Hole In One</Popup>
-          </Marker>
-          <Marker position={[41.679658, -69.9592467]}>
-            <Popup>Chatham Squire</Popup>
-          </Marker>
-          <Marker position={[41.7895014, -69.9915494]}>
-            <Popup>Sunbird Kitchen</Popup>
-          </Marker>
-          <Marker position={[41.7895054, -69.9915494]}>
-            <Popup>Land Ho!</Popup>
-          </Marker>
-          <Marker position={[41.75407, -70.1551718]}>
-            <Popup>Sesuit Harbor Cafe</Popup>
+          <Marker position={[39.04463, -94.59657]}>
+            <Popup>Hampton Inn & Suites Kansas City-Country Club Plaza</Popup>
           </Marker>
         </Map>
       );

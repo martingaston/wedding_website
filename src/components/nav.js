@@ -35,20 +35,20 @@ export default class Nav extends React.Component {
           <div>
             <a href="/jessiandmartin.ics">
               <i className="far fa-calendar-alt" />
-              May 25, 2019
+              October 23, 2022
             </a>
           </div>
           <div>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=wychmere+beach+club">
+            <a href="https://goo.gl/maps/wRrXUMxJ1aB7wpFSA">
               <i className="fas fa-globe-americas" />
-              Harwichport, MA
+              Kansas City, MO
             </a>
           </div>
         </div>
         <ul>
           <List path={this.props.path} link={"/"} text={"Home"} />
           <List path={this.props.path} link={"/schedule"} text={"Schedule"} />
-          <List path={this.props.path} link={"/capecod"} text={"Cape Cod"} />
+          <List path={this.props.path} link={"/KansasCity"} text={"Kansas City"} />
           <List path={this.props.path} link={"/travel"} text={"Travel"} />
           <List path={this.props.path} link={"/registry"} text={"Registry"} />
           <List path={this.props.path} link={"/faq"} text={"FAQ"} />

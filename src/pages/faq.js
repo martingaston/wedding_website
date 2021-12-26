@@ -32,7 +32,7 @@ export default props => (
         <h3>Where should we stay?</h3>
         <p>
           That's SUCH a good question that{" "}
-          <Link to="/capecod">we made a special section for it</Link>. The short
+          <Link to="/KansasCity">we made a special section for it</Link>. The short
           answer? You've got options. The wedding is at Wychmere Beach Club so
           center your searches around Harwich, Dennis, Chatham, Brewster and
           Orleans.
@@ -73,7 +73,7 @@ export default props => (
         <h3>What should I eat?</h3>
         <p>
           If I could make you a BINGO card, I would.{" "}
-          <Link to="/capecod">Some Langsen favorites include</Link> Arnolds or
+          <Link to="/KansasCity">Some Langsen favorites include</Link> Arnolds or
           PJ's for the best beachy junk food fix, Sundae School or the Chocolate
           Sparrow for an ice cream cone, Blackfish or Viera for a nice dinner
           out, the Red Inn for dinner and the Governor Bradford for drag queen
