@@ -2,14 +2,14 @@ import React from "react";
 import Layout from "../components/layout";
 import jam from "../images/WILLOUGHBY_0035_CROP.jpg";
 import jammob from "../images/intro-mobile.jpg";
+import {StaticImage, GatsbyImage,getImage} from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+
 
 export default props => (
   <Layout title="Reece &amp; Jaime" location={props.location}>
-    <picture>
-      <source srcSet={jammob} media="(max-width: 600px)" />
-      <source srcSet={jam} media="(max-width: 200px)"/>
-      <img className="photo" src={jam} alt="The day we met..." />
-    </picture>
+    <StaticImage src = "../images/WILLOUGHBY_0035_CROP.jpg" alt = "Jaime and Reece smiling" />
+    
     <article id="story">
       <section>
         <hr />
@@ -24,3 +24,4 @@ export default props => (
     </article>
   </Layout>
 );
+

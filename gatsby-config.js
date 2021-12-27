@@ -17,14 +17,15 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        trackingId: "UA-125840021-1",
-        head: false,
-        anonymize: true,
-        respectDNT: true
-      }
+        name: "images",
+        path: `${__dirname}/src/images/`,
+      },
     },
-    "gatsby-plugin-offline"
+    "gatsby-plugin-offline",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
   ]
 };
